@@ -1,0 +1,249 @@
+.data {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.separator {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.inputs {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.input {
+  width: 45%;
+  font-family: var(--agb);
+  font-size: 1.5vw;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+}
+
+.title {
+  margin-left: 4%;
+  margin-bottom: 2.5%;
+}
+
+.name-and-surname {
+  width: 100%;
+  height: 5vh;
+  border-radius: 25px;
+  outline: none;
+  border: none;
+  color: var(--blue);
+  font-family: var(--agr);
+  font-size: 1.2vw;
+  padding: 5%;
+}
+
+.name-and-surname::placeholder {
+  color: var(--blue);
+}
+
+.select {
+  width: 100%;
+  height: 5vh;
+  background-color: white;
+  color: var(--blue);
+  font-family: var(--agr);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5%;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1.2vw;
+}
+
+.options {
+  width: 100%;
+  background-color: white;
+  color: var(--blue);
+  font-family: var(--agr);
+  font-size: 1.2vw;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  border-radius: 25px;
+  position: absolute;
+  top: 105%;
+  left: 0;
+  opacity: 1;
+  animation: appear 0.5s ease-in-out;
+}
+
+.option {
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+}
+
+.option:first-child {
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+.option:last-child {
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.option:hover {
+  background-color: var(--blue);
+  color: white;
+}
+
+.selected {
+  transform: rotateZ(180deg);
+  transition: transform 0.5s ease-in-out;
+}
+
+.notSelected {
+  transform: rotateZ(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (orientation: portrait) and (max-width: 1050px) {
+  .inputs {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .input {
+    width: 80%;
+    font-family: var(--agb);
+    font-size: 3.5vw;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    margin-top: 2.5%;
+  }
+
+  .title {
+    margin-left: 4%;
+    margin-bottom: 2.5%;
+  }
+
+  .name-and-surname {
+    width: 100%;
+    height: 5vh;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    color: var(--blue);
+    font-family: var(--agr);
+    font-size: 2.5vw;
+    padding: 5%;
+  }
+
+  .name-and-surname::placeholder {
+    color: var(--blue);
+  }
+
+  .select {
+    width: 100%;
+    height: 5vh;
+    background-color: white;
+    color: var(--blue);
+    font-family: var(--agr);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5%;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 2.5vw;
+  }
+
+  .options {
+    width: 100%;
+    background-color: white;
+    color: var(--blue);
+    font-family: var(--agr);
+    font-size: 2.5vw;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    border-radius: 25px;
+    position: absolute;
+    top: 105%;
+    left: 0;
+    opacity: 1;
+    animation: appear 0.5s ease-in-out;
+  }
+
+  .option {
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .option:first-child {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+  }
+
+  .option:last-child {
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+
+  .selected {
+    transform: rotateZ(180deg);
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .notSelected {
+    transform: rotateZ(0);
+    transition: transform 0.5s ease-in-out;
+  }
+}

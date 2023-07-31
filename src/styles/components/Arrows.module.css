@@ -1,0 +1,65 @@
+.arrows {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.down-arrow {
+  width: 100%;
+  height: 3vh;
+  margin-top: 1%;
+  position: relative;
+}
+
+.down-arrow:nth-child(1)::before,
+.down-arrow:nth-child(1)::after {
+  content: '';
+  width: 50.5%;
+  height: 40%;
+  background-color: var(--pink);
+  border-radius: 10px;
+  box-shadow: 0 0 25px var(--pink), 0 0 25px var(--pink), 0 0 25px var(--pink);
+  box-shadow: 0 0 25px var(--pink), 0 0 25px var(--pink), 0 0 25px var(--pink);
+  box-shadow: 0 0 25px var(--pink), 0 0 25px var(--pink), 0 0 25px var(--pink);
+}
+
+.down-arrow:nth-child(2)::before,
+.down-arrow:nth-child(2)::after {
+  content: '';
+  width: 50.5%;
+  height: 40%;
+  background-color: var(--light-blue);
+  border-radius: 10px;
+  box-shadow: 0 0 25px var(--light-blue), 0 0 25px var(--light-blue),
+    0 0 25px var(--light-blue);
+  box-shadow: 0 0 25px var(--light-blue), 0 0 25px var(--light-blue),
+    0 0 25px var(--light-blue);
+  box-shadow: 0 0 25px var(--light-blue), 0 0 25px var(--light-blue),
+    0 0 25px var(--light-blue);
+}
+
+.down-arrow:nth-child(3)::before,
+.down-arrow:nth-child(3)::after {
+  content: '';
+  width: 50.5%;
+  height: 40%;
+  background-color: var(--blue);
+  border-radius: 10px;
+  box-shadow: 0 0 25px var(--blue), 0 0 25px var(--blue), 0 0 25px var(--blue);
+  box-shadow: 0 0 25px var(--blue), 0 0 25px var(--blue), 0 0 25px var(--blue);
+  box-shadow: 0 0 25px var(--blue), 0 0 25px var(--blue), 0 0 25px var(--blue);
+}
+
+.down-arrow::before {
+  position: absolute;
+  top: 150%;
+  left: 0;
+  transform: rotateZ(5deg);
+}
+
+.down-arrow::after {
+  position: absolute;
+  top: 150%;
+  right: 0;
+  transform: rotateZ(-5deg);
+}

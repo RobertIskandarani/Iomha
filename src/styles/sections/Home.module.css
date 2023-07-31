@@ -1,0 +1,105 @@
+.home {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.panel {
+  width: clamp(210px, 75%, 750px);
+  height: clamp(212px, 33%, 750px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: var(--pink);
+  border-radius: 25px;
+  box-shadow: 0 0 25px var(--pink), 0 0 25px var(--pink), 0 0 25px var(--pink);
+  text-align: center;
+  z-index: 5;
+}
+
+.panel h1 {
+  margin: 0;
+  font-family: var(--agb);
+  font-size: 5vw;
+  transition: 0.5s;
+  z-index: 5;
+}
+
+.panel h3 {
+  margin: 0;
+  font-family: var(--agr);
+  font-size: 3.5vw;
+  transition: 0.5s;
+  z-index: 5;
+}
+
+.arrows {
+  width: clamp(210px, 75%, 750px);
+  z-index: 5;
+}
+
+@media screen and (orientation: portrait) and (max-width: 1050px) {
+  .panel h1 {
+    margin: 0;
+    font-family: var(--agb);
+    font-size: 8vw;
+  }
+
+  .panel h3 {
+    margin: 0;
+    font-family: var(--agr);
+    font-size: 5.5vw;
+  }
+}
+
+.logo {
+  background-image: url(./../../assets/logocaida.png);
+  background-repeat: repeat;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.normal {
+  background-size: 30vw 30vw;
+  background-position: 0 0;
+  filter: blur(1px);
+  animation: logo-normal 12s infinite linear;
+  z-index: 1;
+}
+
+.big {
+  background-size: 40vw 40vw;
+  background-position: 0 90px;
+  filter: blur(0.5px);
+  animation: logo-big 10s infinite linear;
+  z-index: 2;
+}
+
+@keyframes logo-normal {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 30vw 30vw;
+  }
+}
+
+@keyframes logo-big {
+  0% {
+    background-position: 0 90px;
+  }
+  100% {
+    background-position: 40vw calc(90px + 40vw);
+  }
+}
