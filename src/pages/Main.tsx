@@ -4,6 +4,7 @@ import Data from '../sections/Data';
 import Place from '../sections/Place';
 import Food from '../sections/Food';
 import Send from '../sections/Send';
+import ReservePDF from './Reserve';
 
 interface MainProps {
   data: {
@@ -35,6 +36,12 @@ const Main = ({ data, place, food }: MainProps) => {
       <Place place={place.place} setPlace={place.setPlace} />
       <Food food={food.food} setFood={food.setFood} />
       <Send
+        name={data.name}
+        artist={data.artist}
+        place={place.place}
+        food={food.food}
+      />
+      <ReservePDF
         name={data.name}
         artist={data.artist}
         place={place.place}

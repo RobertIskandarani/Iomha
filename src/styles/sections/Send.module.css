@@ -38,11 +38,18 @@
   cursor: pointer;
   border-radius: 25px;
   transition: 0.5s;
+  text-decoration: none;
+  color: white;
 }
 
 .reserve:hover {
   box-shadow: 0 0 25px var(--pink), 0 0 25px var(--pink), 0 0 25px var(--pink);
 }
+
+document {
+  display: none;
+}
+
 @media screen and (orientation: portrait) and (max-width: 1050px) {
   .send-content {
     width: 100%;
@@ -68,5 +75,7 @@
     background-color: var(--pink);
     cursor: pointer;
     border-radius: 10px;
+    text-decoration: none;
+    color: white;
   }
 }

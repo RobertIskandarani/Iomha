@@ -5,7 +5,6 @@ import './App.css';
 
 import Main from './pages/Main';
 import NoPage from './pages/NoPage';
-import Reserve from './pages/Reserve';
 
 const App = () => {
   const [name, setName] = useState('');
@@ -34,12 +33,6 @@ const App = () => {
           path='/'
           index
           element={<Main data={Data} place={Place} food={Food} />}
-        />
-        <Route
-          path='iom-ha-madrij-reservation-info/:user'
-          element={
-            <Reserve name={name} artist={artist} place={place} food={food} />
-          }
         />
         <Route path='*' element={<NoPage />} />
       </Routes>

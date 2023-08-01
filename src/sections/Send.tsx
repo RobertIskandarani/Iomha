@@ -3,7 +3,8 @@ import React from 'react';
 import styles from './../styles/sections/Send.module.css';
 
 import Arrows from '../components/Arrows';
-import { useNavigate } from 'react-router-dom';
+import ReservePDF from '../pages/Reserve';
+import { PDFDownloadLink } from '@react-pdf/renderer';
 
 interface SendProps {
   name: string;
@@ -13,8 +14,6 @@ interface SendProps {
 }
 
 const Send = ({ name, artist, place, food }: SendProps) => {
-  const navigate = useNavigate();
-
   const handleClick = () => {
     if (name === '') {
       alert('Falta ingresar el nombre');
@@ -25,11 +24,6 @@ const Send = ({ name, artist, place, food }: SendProps) => {
     } else if (food === '') {
       alert('Falta ingresar la comida');
     } else {
-      navigate(
-        `iom-ha-madrij-reservation-info/${name
-          .replaceAll(' ', '-')
-          .toLowerCase()}`
-      );
     }
   };
 
@@ -40,9 +34,29 @@ const Send = ({ name, artist, place, food }: SendProps) => {
       </div>
       <div className={styles['send-content']}>
         COMPLETÁ TU RESERVA!
-        <div className={styles.reserve} onClick={() => handleClick()}>
-          RESERVAR
-        </div>
+        {name !== '' &&
+          artist !== 'Elegí un artista' &&
+          place !== '' &&
+          food !== '' && (
+            <PDFDownloadLink
+              className={styles.reserve}
+              document={
+                <ReservePDF
+                  name={name}
+                  artist={artist}
+                  place={place}
+                  food={food}
+                />
+              }
+              fileName={`reserva-${name
+                .toLowerCase()
+                .replaceAll(' ', '-')}.pdf`}
+            >
+              {({ blob, url, loading, error }) =>
+                loading ? 'Cargando...' : 'RESERVAR'
+              }
+            </PDFDownloadLink>
+          )}
       </div>
     </div>
   );
