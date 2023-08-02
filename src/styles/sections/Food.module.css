@@ -30,7 +30,7 @@
 .alert {
   width: clamp(210px, 75%, 750px);
   height: clamp(212px, 33%, 750px);
-  font-family: 'Membra';
+  font-family: 'Membra', var(--agb);
   background-color: var(--pink);
   display: flex;
   justify-content: center;
@@ -166,6 +166,7 @@
     overflow: hidden;
     transition: 0.2s;
     font-size: 3vw;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .selected {

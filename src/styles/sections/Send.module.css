@@ -77,5 +77,6 @@ document {
     border-radius: 10px;
     text-decoration: none;
     color: white;
+    -webkit-tap-highlight-color: transparent;
   }
 }
