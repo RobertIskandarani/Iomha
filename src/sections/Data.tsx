@@ -18,6 +18,8 @@ import Martu from './../assets/Martu.jpeg';
 import Mica from './../assets/Mica.jpeg';
 import Robert from './../assets/Robert.jpeg';
 import Renu from './../assets/Renu.jpeg';
+import Winter from './../assets/Winter.jpeg';
+import JuliVere from './../assets/JuliVere.jpeg';
 
 interface DataProps {
   name: string;
@@ -99,6 +101,8 @@ const Data = ({ name, setName, artist, setArtist }: DataProps) => {
         <img className={styles.image} src={Mica} alt='image' />
         <img className={styles.image} src={Robert} alt='image' />
         <img className={styles.image} src={Renu} alt='image' />
+        <img className={styles.image} src={Winter} alt='image' />
+        <img className={styles.image} src={JuliVere} alt='image' />
       </div>
     </div>
   );

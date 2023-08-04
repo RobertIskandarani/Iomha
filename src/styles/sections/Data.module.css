@@ -245,6 +245,21 @@
   animation: fall 10.5s ease-in-out infinite 0.75s;
 }
 
+.image:nth-child(13) {
+  left: 73%;
+  transform: scale(0.82) rotateZ(235deg);
+  box-shadow: 0 0 25px var(--pink), 0 0 25px var(--pink), 0 0 25px var(--pink);
+  animation: fall 12.75s ease-in-out infinite 0.25s;
+}
+
+.image:nth-child(14) {
+  left: 28%;
+  transform: scale(0.74) rotateZ(310deg);
+  box-shadow: 0 0 25px var(--light-blue), 0 0 25px var(--light-blue),
+    0 0 25px var(--light-blue);
+  animation: fall 10.5s ease-in-out infinite 0.75s;
+}
+
 @keyframes fall {
   100% {
     transform: translateY(calc(120vh + 20vw));
