@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center',
-    fontSize: '4vw',
+    fontSize: '2vw',
     fontWeight: 'extrabold',
   },
 });
@@ -154,9 +154,9 @@ const ReservePDF = ({ name, artist, place, food }: ReserveProps) => {
             </View>
           </View>
           <View style={styles.iomha}>
-            <Image src={logo} style={{ width: '15%' }} />
-            <Text>IOM HA MADRIJ/A</Text>
-            <Image src={logo} style={{ width: '15%' }} />
+            <Image src={logo} style={{ width: '10%' }} />
+            <Text>IOM HA MADRIJ/A, DÍA DEL LÍDER MACABEO</Text>
+            <Image src={logo} style={{ width: '10%' }} />
           </View>
         </View>
       </Page>

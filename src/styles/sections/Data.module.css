@@ -260,6 +260,35 @@
   animation: fall 10.5s ease-in-out infinite 0.75s;
 }
 
+.image:nth-child(15) {
+  left: 36%;
+  transform: scale(0.54) rotateZ(250deg);
+  box-shadow: 0 0 25px var(--pink), 0 0 25px var(--pink), 0 0 25px var(--pink);
+  animation: fall 14.25s ease-in-out infinite 1s;
+}
+
+.image:nth-child(16) {
+  left: 65%;
+  transform: scale(0.82) rotateZ(190deg);
+  box-shadow: 0 0 25px var(--blue), 0 0 25px var(--blue), 0 0 25px var(--blue);
+  animation: fall 11.75s ease-in-out infinite 0.15s;
+}
+
+.image:nth-child(17) {
+  left: 81%;
+  transform: scale(0.66) rotateZ(295deg);
+  box-shadow: 0 0 25px var(--light-blue), 0 0 25px var(--light-blue),
+    0 0 25px var(--light-blue);
+  animation: fall 13.25s ease-in-out infinite 0.95s;
+}
+
+.image:nth-child(18) {
+  left: 8%;
+  transform: scale(0.72) rotateZ(295deg);
+  box-shadow: 0 0 25px var(--blue), 0 0 25px var(--blue), 0 0 25px var(--blue);
+  animation: fall 15s ease-in-out infinite;
+}
+
 @keyframes fall {
   100% {
     transform: translateY(calc(120vh + 20vw));
