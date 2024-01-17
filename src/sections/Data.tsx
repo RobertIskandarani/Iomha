@@ -1,29 +1,29 @@
-import React, { Dispatch, SetStateAction, useState } from 'react';
+import React, { Dispatch, SetStateAction, useState } from "react";
 
-import styles from './../styles/sections/Data.module.css';
+import styles from "./../styles/sections/Data.module.css";
 
-import Separator from '../components/Separator';
+import Separator from "../components/Separator";
 
-import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
-import Bren from './../assets/Bren.jpeg';
-import Caro from './../assets/Caro.jpeg';
-import Eve from './../assets/Eve.jpeg';
-import FedeKaplun from './../assets/FedeKaplun.jpeg';
-import Florte from './../assets/Florte.jpeg';
-import JuliGelis from './../assets/JuliGelis.jpeg';
-import Juze from './../assets/Juze.jpeg';
-import Lara from './../assets/Lara.jpeg';
-import Martu from './../assets/Martu.jpeg';
-import Mica from './../assets/Mica.jpeg';
-import Robert from './../assets/Robert.jpeg';
-import Renu from './../assets/Renu.jpeg';
-import Winter from './../assets/Winter.jpeg';
-import JuliVere from './../assets/JuliVere.jpeg';
-import Sol from './../assets/Sol.jpeg';
-import Mai from './../assets/Mai.jpeg';
-import Chechu from './../assets/Chechu.jpeg';
-import FedeStarop from './../assets/FedeStarop.jpeg';
+import Bren from "./../assets/Bren.jpeg";
+import Caro from "./../assets/Caro.jpeg";
+import Eve from "./../assets/Eve.jpeg";
+import FedeKaplun from "./../assets/FedeKaplun.jpeg";
+import Florte from "./../assets/Florte.jpeg";
+import JuliGelis from "./../assets/JuliGelis.jpeg";
+import Juze from "./../assets/Juze.jpeg";
+import Lara from "./../assets/Lara.jpeg";
+import Martu from "./../assets/Martu.jpeg";
+import Mica from "./../assets/Mica.jpeg";
+import Robert from "./../assets/Robert.jpeg";
+import Renu from "./../assets/Renu.jpeg";
+import Winter from "./../assets/Winter.jpeg";
+import JuliVere from "./../assets/JuliVere.jpeg";
+import Sol from "./../assets/Sol.jpeg";
+import Mai from "./../assets/Mai.jpeg";
+import Chechu from "./../assets/Chechu.jpeg";
+import FedeStarop from "./../assets/FedeStarop.jpeg";
 
 interface DataProps {
   name: string;
@@ -38,18 +38,18 @@ const Data = ({ name, setName, artist, setArtist }: DataProps) => {
   return (
     <div className={styles.data}>
       <div className={styles.separator}>
-        <Separator number={1} text='REGISTRÁ TUS DATOS' />
+        <Separator number={1} text="REGISTRÁ TUS DATOS" />
       </div>
       <div className={styles.inputs}>
         <div className={styles.input}>
           <div className={styles.title}>NOMBRE Y APELLIDO</div>
           <input
-            className={styles['name-and-surname']}
-            type='text'
+            className={styles["name-and-surname"]}
+            type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
             onClick={() => setSelected(false)}
-            placeholder='Ingrese su nombre y apellido'
+            placeholder="Ingrese su nombre y apellido"
           />
         </div>
         <div className={styles.input} onClick={() => setSelected(!selected)}>
@@ -66,25 +66,25 @@ const Data = ({ name, setName, artist, setArtist }: DataProps) => {
             <div className={styles.options}>
               <div
                 className={styles.option}
-                onClick={() => setArtist('El Trinche')}
+                onClick={() => setArtist("El Trinche")}
               >
                 El Trinche
               </div>
               <div
                 className={styles.option}
-                onClick={() => setArtist('Sofi Morandi')}
+                onClick={() => setArtist("Sofi Morandi")}
               >
                 Sofi Morandi
               </div>
               <div
                 className={styles.option}
-                onClick={() => setArtist('Julian Bellese')}
+                onClick={() => setArtist("Julian Bellese")}
               >
                 Julian Bellese
               </div>
               <div
                 className={styles.option}
-                onClick={() => setArtist('Manu Dons')}
+                onClick={() => setArtist("Manu Dons")}
               >
                 Manu Dons
               </div>
@@ -93,24 +93,24 @@ const Data = ({ name, setName, artist, setArtist }: DataProps) => {
         </div>
       </div>
       <div className={styles.images}>
-        <img className={styles.image} src={Bren} alt='image' />
-        <img className={styles.image} src={Caro} alt='image' />
-        <img className={styles.image} src={Eve} alt='image' />
-        <img className={styles.image} src={FedeKaplun} alt='image' />
-        <img className={styles.image} src={Florte} alt='image' />
-        <img className={styles.image} src={JuliGelis} alt='image' />
-        <img className={styles.image} src={Juze} alt='image' />
-        <img className={styles.image} src={Lara} alt='image' />
-        <img className={styles.image} src={Martu} alt='image' />
-        <img className={styles.image} src={Mica} alt='image' />
-        <img className={styles.image} src={Robert} alt='image' />
-        <img className={styles.image} src={Renu} alt='image' />
-        <img className={styles.image} src={Winter} alt='image' />
-        <img className={styles.image} src={JuliVere} alt='image' />
-        <img className={styles.image} src={Sol} alt='image' />
-        <img className={styles.image} src={Mai} alt='image' />
-        <img className={styles.image} src={Chechu} alt='image' />
-        <img className={styles.image} src={FedeStarop} alt='image' />
+        <img className={styles.image} src={Bren} alt="Brem" />
+        <img className={styles.image} src={Caro} alt="Caro" />
+        <img className={styles.image} src={Eve} alt="Eve" />
+        <img className={styles.image} src={FedeKaplun} alt="Kaplun" />
+        <img className={styles.image} src={Florte} alt="Florte" />
+        <img className={styles.image} src={JuliGelis} alt="Juli Gelis" />
+        <img className={styles.image} src={Juze} alt="Juze" />
+        <img className={styles.image} src={Lara} alt="Lara" />
+        <img className={styles.image} src={Martu} alt="Martu" />
+        <img className={styles.image} src={Mica} alt="Mica" />
+        <img className={styles.image} src={Robert} alt="Robert" />
+        <img className={styles.image} src={Renu} alt="Renu" />
+        <img className={styles.image} src={Winter} alt="Winter" />
+        <img className={styles.image} src={JuliVere} alt="Juli Vere" />
+        <img className={styles.image} src={Sol} alt="Sol" />
+        <img className={styles.image} src={Mai} alt="Mai" />
+        <img className={styles.image} src={Chechu} alt="Chechu" />
+        <img className={styles.image} src={FedeStarop} alt="Fede Staro" />
       </div>
     </div>
   );

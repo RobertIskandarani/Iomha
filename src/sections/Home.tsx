@@ -1,9 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import styles from './../styles/sections/Home.module.css';
+import styles from "./../styles/sections/Home.module.css";
 
-import logo from './../assets/logomakeblanco.png';
-import Arrows from '../components/Arrows';
+import Arrows from "../components/Arrows";
 
 const Home = () => {
   return (

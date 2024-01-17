@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
-import styles from './../styles/sections/Send.module.css';
+import styles from "./../styles/sections/Send.module.css";
 
-import Arrows from '../components/Arrows';
-import ReservePDF from '../pages/Reserve';
-import { PDFDownloadLink } from '@react-pdf/renderer';
+import Arrows from "../components/Arrows";
+import ReservePDF from "../pages/Reserve";
+import { PDFDownloadLink } from "@react-pdf/renderer";
 
 interface SendProps {
   name: string;
@@ -14,30 +14,17 @@ interface SendProps {
 }
 
 const Send = ({ name, artist, place, food }: SendProps) => {
-  const handleClick = () => {
-    if (name === '') {
-      alert('Falta ingresar el nombre');
-    } else if (artist === 'Elegí un artista') {
-      alert('Falta ingresar el artista');
-    } else if (place === '') {
-      alert('Falta ingresar el lugar');
-    } else if (food === '') {
-      alert('Falta ingresar la comida');
-    } else {
-    }
-  };
-
   return (
     <div className={styles.send}>
       <div className={styles.arrows}>
         <Arrows />
       </div>
-      <div className={styles['send-content']}>
+      <div className={styles["send-content"]}>
         COMPLETÁ TU RESERVA!
-        {name !== '' &&
-          artist !== 'Elegí un artista' &&
-          place !== '' &&
-          food !== '' && (
+        {name !== "" &&
+          artist !== "Elegí un artista" &&
+          place !== "" &&
+          food !== "" && (
             <PDFDownloadLink
               className={styles.reserve}
               document={
@@ -50,10 +37,10 @@ const Send = ({ name, artist, place, food }: SendProps) => {
               }
               fileName={`reserva-${name
                 .toLowerCase()
-                .replaceAll(' ', '-')}.pdf`}
+                .replaceAll(" ", "-")}.pdf`}
             >
               {({ blob, url, loading, error }) =>
-                loading ? 'Cargando...' : 'RESERVAR'
+                loading ? "Cargando..." : "RESERVAR"
               }
             </PDFDownloadLink>
           )}
