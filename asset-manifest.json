@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/iomha/static/css/main.3ae6ab51.css",
-    "main.js": "/iomha/static/js/main.fea106b1.js",
+    "main.js": "/iomha/static/js/main.effa31d3.js",
     "static/media/Martu.jpeg": "/iomha/static/media/Martu.fbe6b8b4129ea7fa84a4.jpeg",
     "static/media/JuliGelis.jpeg": "/iomha/static/media/JuliGelis.985b953f9bb4757833fa.jpeg",
     "static/media/logocaida.png": "/iomha/static/media/logocaida.bafc9e6a016cd4584a5f.png",
@@ -24,10 +24,10 @@
     "static/media/Winter.jpeg": "/iomha/static/media/Winter.d777ac70c5edbfa5a7b0.jpeg",
     "index.html": "/iomha/index.html",
     "main.3ae6ab51.css.map": "/iomha/static/css/main.3ae6ab51.css.map",
-    "main.fea106b1.js.map": "/iomha/static/js/main.fea106b1.js.map"
+    "main.effa31d3.js.map": "/iomha/static/js/main.effa31d3.js.map"
   },
   "entrypoints": [
     "static/css/main.3ae6ab51.css",
-    "static/js/main.fea106b1.js"
+    "static/js/main.effa31d3.js"
   ]
 }
